@@ -41,15 +41,19 @@ let instructionSteps: Instruction
 func printInstruction(instruction: Instruction) {
     switch instruction {
     case .left(let amount):
-        if amount > 0 {
+        if amount > 1 {
             print("Turn left and take \(amount) steps")
+        } else if amount == 1 {
+            print("Turn left and take \(amount) step")
         }
         else {
             print("Turn left")
         }
     case .right(let amount):
-        if amount > 0 {
+        if amount > 1 {
             print("Turn right and take \(amount) steps")
+        } else if amount == 1 {
+            print("Turn right and take \(amount) step")
         }
         else {
             print("Turn right")
